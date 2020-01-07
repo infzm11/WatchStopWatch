@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_bg" />
+
+    <TextView
+        android:id="@+id/timer_counter_txt"
+        style="@style/Stopwatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:text="00:00.00"
+        android:textColor="@color/timerColor" />
+
+    <ListView
+        android:id="@+id/record_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttom_layout"
+        android:layout_below="@+id/timer_counter_txt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:divider="@null" />
+
+    <RelativeLayout
+        android:id="@+id/buttom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/btn_buttom_timer_pause_bg"
+                        android:gravity="right"
+                        android:padding="13dp"
+                        android:text="@string/reset"
+                        android:textColor="@color/white"
+                        android:textSize="35sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_metering"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/btn_buttom_timer_pause_bg"
+                        android:gravity="right"
+                        android:padding="13dp"
+                        android:text="@string/metering"
+                        android:textColor="@color/white"
+                        android:textSize="35sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_pause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_buttom_timer_resume_bg"
+                        android:padding="13dp"
+                        android:text="@string/pause"
+                        android:textColor="@color/white"
+                        android:textSize="35sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_continues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_buttom_timer_resume_bg"
+                        android:padding="13dp"
+                        android:text="@string/continues"
+                        android:textColor="@color/white"
+                        android:textSize="35sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/btn_midle_line" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_buttom_timer_start_bg"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/start"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+    </RelativeLayout>
+</RelativeLayout>

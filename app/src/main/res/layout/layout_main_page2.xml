@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/black" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/no_metering_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:background="@drawable/no_lap_image" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textSize="30sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/no_metering"/>
+    </LinearLayout>
+    <TextView android:textSize="30sp" android:textColor="@color/jccolor" android:gravity="center" android:id="@+id/record_tv" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp"/>
+    <ListView android:id="@+id/record_listview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="30dp" android:divider="@null" android:layout_below="@+id/record_tv"/>
+</RelativeLayout>

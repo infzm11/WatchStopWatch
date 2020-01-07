@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/black" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="30sp" android:textColor="@color/jccolor" android:gravity="center" android:id="@+id/lap_number_tv" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp"/>
+    <TextView android:textColor="@color/timerColor" android:id="@+id/timer_counter_txt" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="00:00.00" android:layout_centerInParent="true" style="@style/Stopwatch"/>
+    <TextView android:textSize="35sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_start" android:background="@drawable/btn_buttom_timer_start_bg" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/start" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="35sp" android:textColor="@color/white" android:gravity="right" android:id="@+id/tv_pause" android:background="@drawable/btn_buttom_timer_pause_bg" android:padding="15dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/pause"/>
+            <TextView android:textSize="35sp" android:textColor="@color/white" android:gravity="right" android:id="@+id/tv_continues" android:background="@drawable/btn_buttom_timer_pause_bg" android:padding="15dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/continues"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="35sp" android:textColor="@color/white" android:id="@+id/tv_reset" android:background="@drawable/btn_buttom_timer_resume_bg" android:padding="15dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/reset"/>
+            <TextView android:textSize="35sp" android:textColor="@color/white" android:id="@+id/tv_metering" android:background="@drawable/btn_buttom_timer_resume_bg" android:padding="15dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/metering"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
